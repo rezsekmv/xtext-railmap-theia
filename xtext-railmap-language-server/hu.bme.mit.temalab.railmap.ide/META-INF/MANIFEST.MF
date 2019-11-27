@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: hu.bme.mit.temalab.railmap.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: hu.bme.mit.temalab.railmap.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: hu.bme.mit.temalab.railmap.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: hu.bme.mit.temalab.railmap,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: hu.bme.mit.temalab.railmap.ide.contentassist.antlr.internal,
+ hu.bme.mit.temalab.railmap.ide.contentassist.antlr
