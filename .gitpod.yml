@@ -2,7 +2,6 @@ ports:
 - port: 3000
 tasks:
 - init: >
-   sudo apt-get install openjdk-11-jdk &&
    cd xtext-railmap-language-server &&
    ./gradlew shadowJar &&
    cd .. &&
