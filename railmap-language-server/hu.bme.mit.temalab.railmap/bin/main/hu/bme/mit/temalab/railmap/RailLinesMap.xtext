@@ -1,0 +1,50 @@
+grammar hu.bme.mit.temalab.railmap.RailLinesMap with org.eclipse.xtext.common.Terminals
+
+generate railLinesMap "http://www.bme.hu/mit/temalab/railmap/RailLinesMap"
+
+RailLineMap returns RailLineMap:
+	'rail-map' mapName=STRING
+	(
+			stations+=Station
+		|
+			turnouts+=Turnout	
+		|
+			connections+=Connection
+	)*
+	;
+	
+	
+	
+Station:
+	'station' name=ID ('with' tracks=INT 'tracks')? ';';
+	
+Connection:
+	'connection' 
+		'from' src=Location 'to' dst=Location 
+		'in' length=INT 'segments' 
+		(gauge=Gauge)?
+	';'	
+;
+
+Turnout:
+	'turnout' name=ID ';'
+;
+
+Location: StationTrackLocation | TurnoutEndLocation;
+
+StationTrackLocation:
+	station=[Station] 'track' track=INT
+;
+
+TurnoutEndLocation:
+	turnout=[Turnout] '.' end=TurnoutEnd
+;
+
+enum TurnoutEnd:
+	TOP = 'top' | STRAIGHT = 'straight' | DIVERGENT = 'divergent'
+;
+
+enum Gauge: 
+	STANDARD='standard gauge' | NARROW='narrow gauge' | BROAD = 'broad gauge'
+;
+

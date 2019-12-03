@@ -1,0 +1,17 @@
+rail-map "Magyarorszag"
+
+//Ez egy komment
+
+station Buda with 8 tracks;
+
+station "Kecskemet"           //nem kell idezojel
+
+turnout Valami with 5 tracks; //turnout után nem jöhet with!!
+
+
+
+
+/*  Ez
+    egy
+    blokk
+    komment */
