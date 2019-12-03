@@ -1,3 +1,0 @@
-include 'hu.bme.mit.temalab.railmap'
-include 'hu.bme.mit.temalab.railmap.ide'
-include 'hu.bme.mit.temalab.railmap.tests'

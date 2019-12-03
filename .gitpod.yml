@@ -2,10 +2,10 @@ ports:
 - port: 3000
 tasks:
 - init: >
-   cd xtext-railmap-language-server &&
+   cd railmap-language-server &&
    ./gradlew shadowJar &&
    cd .. &&
-   yarn
+   yarn install
   command: >
    cd app &&
    yarn start ../workspace

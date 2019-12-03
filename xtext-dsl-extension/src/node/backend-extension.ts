@@ -28,8 +28,8 @@ function getPort(): number | undefined {
 @injectable()
 class DSLContribution extends BaseLanguageServerContribution {
 
-    readonly id = "dsl";
-    readonly name = "DSL";
+    readonly id = "rail";
+    readonly name = "RAIL";
 
     start(clientConnection: IConnection): void {
         let socketPort = getPort();
@@ -41,7 +41,7 @@ class DSLContribution extends BaseLanguageServerContribution {
             this.forward(clientConnection, serverConnection)
             socket.connect(socketPort)
         } else {
-            const jar = path.resolve(__dirname, '../../build/railmap-language-server.jar');
+            const jar = path.resolve(__dirname, '../../build/hu.bme.mit.temalab.railmap.ide-ls.jar');
     
             const command = 'java';
             const args: string[] = [

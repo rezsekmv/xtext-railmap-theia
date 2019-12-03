@@ -19,7 +19,7 @@
   },
   "scripts": {
     "prepare": "yarn run clean && yarn run build",
-    "copy-ls": "rimraf build && copyfiles -f ../xtext-railmap-language-server/hu.bme.mit.temalab.railmap.ide/build/libs/railmap-language-server.jar build",
+    "copy-ls": "rimraf build && copyfiles -f ../railmap-language-server/hu.bme.mit.temalab.railmap.ide/build/libs/hu.bme.mit.temalab.railmap.ide-ls.jar build",
     "clean": "rimraf lib",
     "build": "tsc && yarn run copy-ls",
     "watch": "tsc -w"
