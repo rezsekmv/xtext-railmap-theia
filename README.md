@@ -1,4 +1,6 @@
-# xtext-railmap-theia
+# Railmap with xtext and Eclipse Theia
+
+With this repository you can build a railmap in a webIDE (powered by Eclipse Theia) and you will have syntax highlight, code suggestions etc.
 
 #### Requirements:
 
